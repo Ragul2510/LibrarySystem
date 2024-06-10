@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home</title>
+    <link rel="stylesheet" href="css/styles - Copy.css">
+    <style>
+        #logoutButton {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #e20930;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            line-height: normal;
+        }
+
+        #logoutButton:hover {
+            background-color: #ff4769;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Books</h1>
+    <form action="search_books.php" method="get">
+        <input type="text" name="search_term" placeholder="Search for books">
+        <button type="submit">Search</button>
+    </form>
+    <form action="search_books.php" method="get">
+        <button type="submit" name="show_all" value="true">Show All Books</button>
+    </form>
+    <ul id="books-list">
+    </ul>
+    <a href="logout.php" id="logoutButton">Logout</a>
+</body>
+</html>
